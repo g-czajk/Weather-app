@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="theme-color" content="#6B7280" />
+        <title>Weather app</title>
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body class="bg-gray-200">
+        <div
+            class="relative wrap h-screen m-auto bg-gray-700 text-gray-50 lg:rounded-xl lg:mt-20"
+        >
+            <header class="h-1/5 flex justify-center items-center">
+                <h1 class="text-4xl tracking-wider text-yellow-300">
+                    weather app
+                </h1>
+            </header>
+
+            <main class="h-4/5 flex flex-col justify-start items-center">
+                <div class="city my-2 text-3xl text-center">-----</div>
+                <div class="icon my-2">
+                    <img class="icon-img" src="img/unknown.png" alt="" />
+                </div>
+                <div class="temp my-2 text-3xl">
+                    <span class="temp-value">--</span> <span> &#x2103;</span>
+                </div>
+                <div class="feels-like">
+                    <span class="feels-like-temp-value text-sm">--</span>
+                    <span> &#x2103;</span>
+                </div>
+                <div class="pressure">
+                    <span class="pressure-value text-sm">--</span>
+                </div>
+                <div class="wind">
+                    <span class="wind-speed text-sm">--</span>
+                    <span
+                        class="wind-direction mx-2 inline-block text-sm origin-center"
+                        >&#x2193;</span
+                    >
+                </div>
+                <div class="description my-3 text-2xl">---</div>
+                <div class="insert mt-12 mb-1 lg:mt-24 mb-1">
+                    <input
+                        type="text"
+                        class="input h-8 w-60 mr-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded-md text-gray-700 text-center"
+                        placeholder="podaj lokalizację"
+                    />
+                    <button
+                        class="button h-8 w-8 border-yellow-300 border-2 rounded-md focus:outline-none text-yellow-300"
+                    >
+                        &#x27A4;
+                    </button>
+                </div>
+                <div class="error text-red-500 text-xs hidden">
+                    wprowadź dane w prawidłowym formacie!
+                </div>
+            </main>
+
+            <footer class="absolute bottom-2 right-3 text-xs opacity-70">
+                Powered by
+                <a href="https://openweathermap.org/" target="blank"
+                    >OpenWeatherMap.org</a
+                >
+            </footer>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>

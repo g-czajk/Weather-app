@@ -8,6 +8,7 @@ const pressure = document.querySelector(".pressure-value");
 const windSpeed = document.querySelector(".wind-speed");
 const windDirection = document.querySelector(".wind-direction");
 const desc = document.querySelector(".description");
+const wrapper = document.querySelector(".wrap");
 
 const input = document.querySelector(".input");
 const btn = document.querySelector(".button");
@@ -82,6 +83,10 @@ const loadData = async function (city) {
                 // style input
                 input.value = "";
                 styleInput(false);
+                // scroll to top of the APP on mobile
+                wrapper.scrollIntoView({
+                    behavior: "smooth",
+                });
             }
             // if wrong city name was inserted (unknown city), throw error
             else if (
@@ -102,6 +107,10 @@ const loadData = async function (city) {
             showError(err);
             // style input
             styleInput(false);
+            // scroll to top of the APP on mobile
+            wrapper.scrollIntoView({
+                behavior: "smooth",
+            });
             // log error into console
             console.log(err);
         }
